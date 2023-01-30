@@ -1,0 +1,12 @@
+[submodule "CLI"]
+	path = CLI
+	url = https://github.com/Discord-Dashboard/CLI
+[submodule "NextCore"]
+	path = NextCore
+	url = https://github.com/Discord-Dashboard/NextCore
+[submodule "Store"]
+	path = Store
+	url = https://github.com/Discord-Dashboard/Store
+[submodule "Soiree-Theme"]
+	path = Soiree-Theme
+	url = https://github.com/Discord-Dashboard/Soiree-Theme
