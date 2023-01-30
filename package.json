@@ -1,0 +1,19 @@
+{
+  "name": "@discord-dashboard/core",
+  "version": "0.0.0-beta.0",
+  "description": "",
+  "main": "dist/index",
+  "typings": "dist/index",
+  "scripts": {
+    "build": "tsc && tsc-alias"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "keyv": "^4.5.2"
+  },
+  "devDependencies": {
+    "tsc-alias": "^1.8.2"
+  }
+}
