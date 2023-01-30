@@ -1,6 +1,6 @@
 {
   "name": "@discord-dashboard/core",
-  "version": "0.0.0-beta.0",
+  "version": "0.0.0-beta.3",
   "description": "",
   "main": "dist/index",
   "typings": "dist/index",
@@ -11,9 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fastify": "^4.12.0",
     "keyv": "^4.5.2"
   },
   "devDependencies": {
+    "@types/node": "^18.11.18",
     "tsc-alias": "^1.8.2"
   }
 }
