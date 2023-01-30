@@ -3,12 +3,12 @@ import fastify, { FastifyInstance } from "fastify";
 
 import { InjectMiddleware } from "@/server/utils/middleware";
 import { PrepareRoutes } from "@/server/utils/routes";
-import { Db } from "@/db/db";
+import { Database } from "@/database/Database";
 
 export class Server {
     public readonly fastify: FastifyInstance;
 
-    constructor(public options: IServerOptions, public db: Db) {
+    constructor(public options: IServerOptions, public db: Database) {
         this.fastify = fastify({
             logger: this.options.dev,
         });

@@ -63,6 +63,8 @@ export const InjectMiddleware = async (server: Server) => {
                         statusCode: 401,
                     });
                 }
+
+                request.user.data = tokenValid;
             } catch (err: any) {
                 throw new ServerError({
                     error: "UNAUTHORIZED",

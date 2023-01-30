@@ -1,6 +1,6 @@
 const KeyVModule = require("keyv");
 
-export class Db {
+export class Database {
     private readonly keyv;
     constructor(src: string, namespace?: string) {
         this.keyv = new KeyVModule(src, namespace ? { namespace } : undefined);
