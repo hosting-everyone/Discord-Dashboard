@@ -10,3 +10,6 @@
 [submodule "Soiree-Theme"]
 	path = Soiree-Theme
 	url = https://github.com/Discord-Dashboard/Soiree-Theme
+[submodule "WebSocket"]
+	path = WebSocket
+	url = https://github.com/Discord-Dashboard/WebSocket
