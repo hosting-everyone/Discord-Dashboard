@@ -109,6 +109,7 @@
     "Soiree-Theme",
     "NextCore",
     "CLI",
-    "WebSocket"
+    "WebSocket",
+    "dist"
   ]
 }

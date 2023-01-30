@@ -1,4 +1,4 @@
-const KeyVModule = require('keyv');
+const KeyVModule = require("keyv");
 
 export class Db {
     private readonly keyv;
@@ -10,7 +10,7 @@ export class Db {
         return this.keyv.get(key);
     }
 
-    public async set(key: string, value: any): Promise<any> {
-        return this.keyv.set(key, value);
+    public async set(key: string, value: any, ttl?: number): Promise<any> {
+        return this.keyv.set(key, value, ttl || undefined);
     }
 }

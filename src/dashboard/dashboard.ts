@@ -4,6 +4,7 @@ import { IThemeProvider } from "@/dashboard/dashboard.interface";
 import { Db } from "@/db/db";
 
 export class Dashboard {
+    public server!: Server;
     private readonly serverOptions: IServerOptions = {
         dev: true,
         port: 3000,
@@ -11,9 +12,18 @@ export class Dashboard {
         project: {
             account_access_token: "",
             project_id: "",
-        }
+        },
+        secrets: {
+            jwt: "",
+            cookie: "",
+        },
+        oauth2: {
+            client_id: "",
+            client_secret: "",
+            redirect_uri: "",
+            encryption_key: "dgstrhgtee",
+        },
     };
-    public server!: Server;
     private theme!: IThemeProvider;
     private readonly db: Db;
 
@@ -32,13 +42,19 @@ export class Dashboard {
     async prepare(): Promise<Dashboard> {
         this.isPremium = false;
 
-        this.server = new Server(this.serverOptions);
-        await this.theme.init(this, new Db(this.serverOptions.keyv, `theme_settings.${this.theme.codename}`));
+        this.server = new Server(this.serverOptions, this.db);
+        await this.theme.init(
+            this,
+            new Db(
+                this.serverOptions.keyv,
+                `theme_settings.${this.theme.codename}`
+            )
+        );
         return this;
     }
 
     async start(): Promise<Dashboard> {
-        if(!this.server) {
+        if (!this.server) {
             await this.prepare();
         }
         await this.server.start();
