@@ -3,7 +3,7 @@ import fastify, { FastifyInstance } from "fastify";
 
 import { InjectMiddleware } from "@/server/utils/middleware";
 import { PrepareRoutes } from "@/server/utils/routes";
-import { Database } from "@/database/Database";
+import { Database } from "@/database/database";
 
 export class Server {
     public readonly fastify: FastifyInstance;

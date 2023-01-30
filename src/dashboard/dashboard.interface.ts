@@ -1,5 +1,5 @@
 import { Dashboard } from "@/dashboard/dashboard";
-import { Database } from "@/database/Database";
+import { Database } from "@/database/database";
 
 export interface IThemeProvider {
     name: string;

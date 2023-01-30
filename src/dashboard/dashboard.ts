@@ -1,7 +1,7 @@
 import { IServerOptions } from "@/server/server.interface";
 import { Server } from "@/server/server";
 import { IThemeProvider } from "@/dashboard/dashboard.interface";
-import { Database } from "@/database/Database";
+import { Database } from "@/database/database";
 
 export class Dashboard {
     public server!: Server;
