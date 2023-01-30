@@ -1,3 +1,5 @@
+import { Client, PermissionsBitField } from "discord.js";
+
 export interface IProjectInfo {
     account_access_token: string;
     project_id: string;
@@ -11,6 +13,8 @@ export interface IOAuthSecrets {
 }
 
 export interface IServerOptions {
+    djs_client: Client;
+    permissions_required: PermissionsBitField[];
     dev: boolean;
     port: number;
     keyv: string;

@@ -5,25 +5,7 @@ import { Db } from "@/db/db";
 
 export class Dashboard {
     public server!: Server;
-    private readonly serverOptions: IServerOptions = {
-        dev: true,
-        port: 3000,
-        keyv: "",
-        project: {
-            account_access_token: "",
-            project_id: "",
-        },
-        secrets: {
-            jwt: "",
-            cookie: "",
-        },
-        oauth2: {
-            client_id: "",
-            client_secret: "",
-            redirect_uri: "",
-            encryption_key: "dgstrhgtee",
-        },
-    };
+    private readonly serverOptions!: IServerOptions;
     private theme!: IThemeProvider;
     private readonly db: Db;
 
