@@ -58,4 +58,25 @@ export class DiscordOAuth2Client {
             });
         }
     }
+
+    public async getGuilds(accessToken: string) {
+        try {
+            const response = await axios.get(
+                "https://discord.com/api/users/@me/guilds",
+                {
+                    headers: {
+                        Authorization: `Bearer ${accessToken}`,
+                    },
+                }
+            );
+
+            return response.data;
+        } catch (err) {
+            throw new ServerError({
+                error: "SERVER_ERROR",
+                message: "Error while getting guilds",
+                statusCode: 500,
+            });
+        }
+    }
 }
