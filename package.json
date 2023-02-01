@@ -15,13 +15,14 @@
     "@fastify/jwt": "^6.5.0",
     "axios": "^1.2.6",
     "cryptr": "^6.1.0",
+    "discord-api-types": "^0.37.31",
     "discord.js": "^14.*",
     "fastify": "^4.12.0",
     "keyv": "^4.5.2"
   },
   "devDependencies": {
+    "@types/cryptr": "^4.0.1",
     "@types/node": "^18.11.18",
-    "tsc-alias": "^1.8.2",
-    "@types/cryptr": "^4.0.1"
+    "tsc-alias": "^1.8.2"
   }
 }

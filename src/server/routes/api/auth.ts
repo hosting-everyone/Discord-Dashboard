@@ -12,6 +12,14 @@ export const AuthRoute =
         const cryptr = new Cryptr(server.options.oauth2.encryption_key);
 
         fastify.get(
+            "/me",
+            { preHandler: [fastify.authorize, fastify.allowOnlyAuthorized] },
+            (request: FastifyRequest, reply) => {
+                return request.user.data.user;
+            }
+        );
+
+        fastify.get(
             "/",
             { preHandler: [fastify.authorize] },
             (

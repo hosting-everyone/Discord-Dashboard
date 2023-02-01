@@ -13,3 +13,7 @@ export {
     OptionType,
     BuiltInOptionTypes,
 } from "@/dashboard/form_options/options.interface";
+
+export { IUserSession } from "@/server/server.interface";
+
+export { IError, ServerError } from "@/server/utils/errors";

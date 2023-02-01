@@ -327,7 +327,7 @@
   dependencies:
     "path-type" "^4.0.0"
 
-"discord-api-types@^0.37.20", "discord-api-types@^0.37.23":
+"discord-api-types@^0.37.20", "discord-api-types@^0.37.23", "discord-api-types@^0.37.31":
   "integrity" "sha512-k9DQQ7Wv+ehiF7901qk/FnP47k6O2MHm3meQFee4gUzi5dfGAVLf7SfLNtb4w7G2dmukJyWQtVJEDF9oMb9yuQ=="
   "resolved" "https://registry.npmjs.org/discord-api-types/-/discord-api-types-0.37.31.tgz"
   "version" "0.37.31"

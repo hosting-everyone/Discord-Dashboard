@@ -1,4 +1,5 @@
 import { Client, PermissionsBitField } from "discord.js";
+import { APIUser } from "discord-api-types/v10";
 
 export interface IProjectInfo {
     account_access_token: string;
@@ -26,9 +27,21 @@ export interface IServerOptions {
     };
 }
 
+export interface IUserSession {
+    id: string;
+    iat: number;
+    exp: number;
+    data: {
+        access_token: string;
+        refresh_token: string;
+        expires_date: Date;
+        user: APIUser;
+    };
+}
+
 declare module "fastify" {
     interface FastifyRequest {
-        user: any;
+        user: IUserSession;
     }
 
     interface FastifyInstance {

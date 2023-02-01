@@ -7,6 +7,7 @@ import FastifyCookie from "@fastify/cookie";
 import { FastifyReply, FastifyRequest } from "fastify";
 
 import { IError, ServerError } from "@/server/utils/errors";
+import { IUserSession } from "@/server/server.interface";
 
 export const InjectMiddleware = async (server: Server) => {
     await server.fastify.register(FastifyJWT, {
