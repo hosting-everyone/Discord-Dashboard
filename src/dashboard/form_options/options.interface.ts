@@ -27,6 +27,7 @@ export type OptionSetter<T> = (
 
 export class OptionBase {
     public callable: boolean = true; // updateData will be called
+    public value: any;
 
     protected type!: string;
     public id: string = "";
