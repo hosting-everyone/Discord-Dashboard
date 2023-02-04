@@ -27,6 +27,7 @@ jobs:
       - name: Commit files
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
+          contents: write
           commit_message: Build changes
           branch: build
           create_branch: true
