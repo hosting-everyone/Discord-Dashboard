@@ -13,3 +13,4 @@ var export_1 = require("./dashboard/form_options/export");
 Object.defineProperty(exports, "FormOptions", { enumerable: true, get: function () { return export_1.FormOptions; } });
 var errors_1 = require("./server/utils/errors");
 Object.defineProperty(exports, "ServerError", { enumerable: true, get: function () { return errors_1.ServerError; } });
+console.log("actions test");
