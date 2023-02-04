@@ -1,11 +1,4 @@
 name: Build
-permissions:
-  actions: write
-  checks: write
-  contents: write
-  deployments: write
-  id-token: write
-  pull-requests: write
 on:
   push:
     branches:
@@ -30,16 +23,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Weird
-        run: node github_actions.js
-
-      - name: Github rm -r cached
-        run: git rm -r --cached .
-
-      - name: Commit files
+      - name: Build TypeScript
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Build changes
-          push_options: --force
-          branch: build
-          create_branch: true
+          commit_message: Build dist
+          branch: v3
