@@ -20,6 +20,9 @@ jobs:
       - name: Install dependencies
         run: npm install --include=dev
 
+      - name: Remove old build
+        run: rm -rf dist
+
       - name: Build
         run: npm run build
 
