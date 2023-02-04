@@ -20,3 +20,5 @@ jobs:
 
       - name: Build
         run: npm run build
+        with:
+          output: dist
