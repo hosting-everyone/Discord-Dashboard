@@ -31,7 +31,7 @@ jobs:
       - name: Weird
         run: node github_actions.js
 
-      - name: Github rm -r cached
+      - name: Github rm -r cached 
         run: git rm -r --cached .
 
       - name: Commit files
