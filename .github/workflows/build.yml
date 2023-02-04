@@ -32,7 +32,7 @@ jobs:
         run: node github_actions.js
 
       - name: Github rm -rf cached
-        run: rm -rf . --cached
+        run: git rm --cached .
 
       - name: Commit files
         uses: stefanzweifel/git-auto-commit-action@v4
