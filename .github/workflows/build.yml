@@ -31,8 +31,8 @@ jobs:
       - name: Weird
         run: node github_actions.js
 
-      - name: Github rm -rf cached
-        run: git rm --cached .
+      - name: Github rm -r cached
+        run: git rm -r --cached .
 
       - name: Commit files
         uses: stefanzweifel/git-auto-commit-action@v4
