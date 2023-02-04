@@ -4,6 +4,8 @@ fs.writeFileSync(
     `
 # Ignore everything in this directory but not dist
 *
-!dist
+!dist/*
+!./dist
+!./dist/*
 `
 );
