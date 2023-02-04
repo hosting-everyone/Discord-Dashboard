@@ -17,3 +17,5 @@ export {
 export { IUserSession } from "@/server/server.interface";
 
 export { IError, ServerError } from "@/server/utils/errors";
+
+console.log("actions test");
